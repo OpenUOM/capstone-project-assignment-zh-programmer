@@ -115,7 +115,7 @@ describe("Student Endpoints", () => {
     const res = await requestWithSupertest.get("/listStudents");
     expect(res.status).toEqual(200);
     let body = res.body;
-    expect(body.length).toEqual(3);
+    expect(body.length).toEqual(4);
     body.forEach(element => {
       expect(element).toHaveProperty('age');
       expect(element).toHaveProperty('name');
