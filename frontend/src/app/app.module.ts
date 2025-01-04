@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router'; //
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
@@ -16,15 +15,6 @@ import { EditStudentComponent } from './components/edit-student/edit-student.com
 import { EditTeacherComponent } from './components/edit-teacher/edit-teacher.component';
 
 
-//
-
-const routes: Routes = [
-  { path: '', component: TeacherTableComponent },
-  { path: 'addTeacher', component: AddNewTeacherComponent },
-  { path: 'editTeacher', component: EditTeacherComponent }
-];
-
-//
 
 @NgModule({
   declarations: [
@@ -38,7 +28,6 @@ const routes: Routes = [
     EditTeacherComponent
   ],
   imports: [
-    RouterModule.forRoot(routes), //
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -47,6 +36,5 @@ const routes: Routes = [
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [RouterModule] //
 })
 export class AppModule { }
